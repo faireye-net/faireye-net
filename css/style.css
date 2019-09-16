@@ -21,6 +21,10 @@ nav .brand-logo-svg {
   height: 1.8em;
 }
 
+.brand-tipo-side {
+	margin: 27px;
+}
+
 p {
   line-height: 2rem;
 }
