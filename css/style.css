@@ -18,7 +18,7 @@ nav .brand-tipo-svg {
 }
 nav .brand-logo-svg {
   padding-top: 10px;
-  height: 1.8em;
+  height: 1.6em;
 }
 
 .brand-tipo-side {
@@ -88,6 +88,10 @@ p {
   height: 128px
 }
 
+.cont-demo {
+	width: 80%;
+}
+
 .col-dimostrazione {
   margin-top: 60px;
   margin-bottom: 50px;
@@ -98,6 +102,7 @@ p {
 }
 
 .striscia-demo {
+  background-color: rgba(68,68,68,0.8);
   position: absolute;
   left: 0;
   width: 100%;
@@ -111,6 +116,10 @@ p {
 
 .round-demo {
   border-radius: 12px;
+  height: 260px;
+  justify-content: flex-end;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .video-container, #videoFrame {
