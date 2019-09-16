@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>FairEye - Sorveglianza aerea Aziendale</title>
 
-	<link rel="icon" href="favicon.png">
+	<link rel="icon" href="./media/favicon.png">
 	
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,27 +14,32 @@
 </head>
 <body>
 	
+	<video autoplay loop muted id="bgvid">
+		<source src="demo.mp4" type="video/mp4">
+	</video>
   
   <div class="navbar-fixed">
     <nav role="navigation" class="white">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">FairEye</a>
+        <a id="logo-container" href="#" class="brand-logo">
+					<img src="./media/logotipo.svg" class="brand-tipo-svg hide-on-med-and-down"/>
+					<img src="./media/logoT.svg" class="brand-logo-svg"/></a>
+				<a href="#" data-target="nav-mobile" class="sidenav-trigger button-collapse"><i class=	"material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#servizio">Attività</a></li>
+          <li><a href="#cosa">Attività</a></li>
 					<li><a href="#team">Team</a></li>
 					<li><a href="#demo">Dimostrazione</a></li>
 					<li><a href="#contatti">Contattaci</a></li>
         </ul>
-				<ul id="nav-mobile" class="sidenav">
-          <li><a href="#servizio">Attività</a></li>
-					<li><a href="#team">Team</a></li>
-					<li><a href="#demo">Dimostrazione</a></li>
-					<li><a href="#contatti">Contattaci</a></li>
-				</ul>
-				<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
     </nav>
   </div>
+	<ul id="nav-mobile" class="sidenav">
+		<li><a href="#cosa" class="sidenav-close">Attività</a></li>
+		<li><a href="#team" class="sidenav-close">Team</a></li>
+		<li><a href="#demo" class="sidenav-close">Dimostrazione</a></li>
+		<li><a href="#contatti" class="sidenav-close">Contattaci</a></li>
+	</ul>
 
 	<!-- Intro -->
   <div id="index-banner" class="parallax-container">
@@ -57,7 +62,7 @@
 
 	<!-- Servizio -->
 	<div class="backWhite white">
-		<div id="servizio" class="container">
+		<div id="cosa" class="container">
 			<div class="section">
 				<!--   Icon Section   -->
 				<div class="row col-servizio">
@@ -97,9 +102,9 @@
 	</div>
 
 
-  <div class="parallax-container valign-wrapper">
+  <div id="team" class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
-      <div class="container">
+      <div class="container col-dimostrazione">
         <div class="row center">
           <h5 class="header col s12 light">Siamo qui per fornirti un servizio al TOP</h5>
         </div>
@@ -110,7 +115,7 @@
 
 	<!-- Team -->
 	<div class="backWhite white">
-		<div id="team" class="container white">
+		<div class="container white">
 			<div class="section">
 				<!--   Icon Section   -->
 				<div class="row col-servizio">
@@ -154,86 +159,56 @@
 		</div>
 	</div>
 	
-	<div class="section no-pad-bot" id="demo" >
-    <div class="container col-servizio">
-      <div class="col s12 m4">
-          <div class="icon-block">
-            <!--<h2 class="center light-blue-text"><i class="material-icons">group</i></h2>-->
-            <h5 class="center">Il servizio è personalizzato su misura dell'azienda</h5>
-						<div class="row col-servizio">
-							<p class="light col s12 m6">Testo Interessante</p>
-							<div class="video-YT col s12 m6">
-								<iframe id="videoFrame" src="https://www.youtube.com/embed/qh7XbkGb31c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
+	<div id="demo" class="section no-pad-bot">
+    <div class="container">
+      <div class="row">
+				<div class="icon-block col-dimostrazione">
+					<!--<h2 class="center light-blue-text"><i class="material-icons">group</i></h2>-->
+					<h5 class="center sfondo-demo striscia-demo">Il servizio è personalizzato, a misura di azienda</h5>
+					<div class="row spazio-demo">
+						<div class="video-YT col s12 m6 video-container">
+							<iframe id="videoFrame" src="https://www.youtube.com/embed/qh7XbkGb31c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
-          </div>
-        </div>
-        <video autoplay loop muted id="bgvid">
-            <source src="demo.mp4" type="video/mp4">
-        </video>
+						<p class="light col s12 m5 offset-m1 sfondo-demo round-demo">Testo Interessante</p>
+					</div>
+				</div>
+			</div>
     </div>
   </div>
 
 	<div class="backWhite white">
 		<div id="contatti" class="container">
 			<div class="section">
-				<div class="row">
+				<div class="row col-contattaci">
 					<div class="col s12 center">
-						<h3><i class="mdi-content-send brown-text"></i></h3>
-						<h4>Contattaci per una dimostrazione</h4>
+						<h5>Vuoi saperne di piu?</h5>
 						<form class="col s12" id="formContatti">
 							<div class="row">
 									<div class="input-field col m6 s12">
-											<input id="first_name" type="text" class="validate">
-											<label for="first_name">First Name</label>
+											<input id="nome" type="text" class="validate" required>
+											<label for="nome">Nome</label>
 									</div>
 									<div class="input-field col m6 s12">
-											<input id="last_name" type="text" class="validate">
-											<label for="last_name">Last Name</label>
+											<input id="luogo" type="text" class="validate">
+											<label for="luogo">Luogo</label>
 									</div>
-							</div>
-							<div class="row">
-									<div class="input-field col m6 s12">
-											<i class="mdi-content-mail prefix"></i>
-											<input id="email" type="email" class="validate" required>
-											<label for="email">Email</label>
-									</div>
-									<div class="input-field col m6 s12">
-											<i class="mdi-maps-store-mall-directory prefix"></i>
-											<input id="company" type="text" class="validate">
-											<label for="company">Company</label>
-									</div>
-							</div>
-							<div class="row">
 									<div class="input-field col s12">
-										<textarea id="message" class="materialize-textarea"></textarea>
-										<label for="message">Message</label>
+										<textarea id="message" class="materialize-textarea" ></textarea>
+										<label for="message">Dettagli sulla richiesta</label>
+										<span class="helper-text left-align">Spiega perchè ci stai contattando ed eventuali dettagli</span>
+									</div>
+									<div class="input-field col m6 s12">
+											<input id="mail" type="email" class="validate" required>
+											<label for="mail">E-Mail</label>
+									</div>
+									<div class="input-field col m6 s12">
+											<input id="cell" type="tel" class="validate">
+											<label for="cell">Cellulare</label>
 									</div>
 							</div>
-							<div class="divider"></div>
-							<div class="row">
-									<div class="input-field col s12">
-										<label>Communication Preferences</label>
-										<br/>
-									</div>
-									<div class="input-field col m4 s12 center-align">
-										<input name="group2" type="checkbox" id="emailComm" />
-										<label for="emailComm">Email</label>
-									</div>
-									<div class="input-field col m4 s12 center-align">
-										<input name="group2" type="checkbox" id="callComm" />
-										<label for="callComm">Call Me</label>
-									</div>
-									<div class="input-field col m4 s12 center-align">
-										<input name="group2" type="checkbox" id="newsletter" />
-										<label for="newsletter">Newsletter</label>
-									</div>
-							</div>
-							<div class="divider"></div>
-							<div class="row">
-									<div class="col m12">
-									 <p class="right-align"><button class="btn btn-large waves-effect waves-light" type="button" name="action">Send Message</button></p>
-									</div>
+							<div class="row col-bott-contattaci">
+								<button class="btn waves-effect waves-light col m8 s12 offset-m2 blue darken-3"
+									type="button" name="action">Contattaci</button>
 							</div>
 						</form>
 					</div>
@@ -243,6 +218,7 @@
 	</div>
 
   <footer class="page-footer">
+		<!--
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -270,10 +246,11 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div>-->
     <div class="footer-copyright">
-      <div class="container right-align">
-      © FairEye 2019
+      <div class="container row">
+				<div class="left-align col s6">info@faireye.it</div>
+				<div class="right-align col s6">© FairEye 2019</div>
       </div>
     </div>
   </footer>
