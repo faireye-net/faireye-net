@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	
@@ -40,6 +41,14 @@
 		<li><a href="#team" class="sidenav-close">Team</a></li>
 		<li><a href="#demo" class="sidenav-close">Dimostrazione</a></li>
 		<li><a href="#contatti" class="sidenav-close">Contattaci</a></li>
+		<div class="icon-button container row center">
+			<div href="#" class="sidenav-close col s4">
+				<a href="#" class="fax fa fa-facebook facebook"></a></div>
+			<div href="#" class="sidenav-close col s4">
+				<a href="#" class="fax fa fa-youtube youtube"></a></div>
+			<div href="#" class="sidenav-close col s4">
+				<a href="#" class="fax fa fa-instagram instagram"></a></div>
+		</div>
 	</ul>
 
 	<!-- Intro -->
@@ -107,11 +116,11 @@
     <div class="section no-pad-bot">
       <div class="container col-dimostrazione">
         <div class="row center">
-          <h5 class="header col s12 light">Siamo qui per fornirti un servizio al TOP</h5>
+          <h5 class="header col s12 light" hidden	>Siamo qui per fornirti un servizio al TOP</h5>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="./media/tutti.png" alt="Unsplashed background img 2"></div>
   </div>
 
 	<!-- Team -->
@@ -125,7 +134,7 @@
 							<div class="center"><img src="profilo.png" class="circle ritratto"/></div>
 							<h5 class="center blue-text text-darken-3">Federico Esposito</h5>
 							<h6 class="center blue-text text-darken-4">CEO</h5>
-							<p class="light center-align">Descrizione federico</p>
+							<p class="light center-align">Studente di Fisica<br/>appassionato di Meccanica</p>
 						</div>
 					</div>
 					
@@ -134,7 +143,7 @@
 							<div class="center"><img src="profilo.png" class="circle ritratto"/></div>
 							<h5 class="center blue-text text-darken-3">Giuseppe Nardiello</h5>
 							<h6 class="center blue-text text-darken-4">CTO</h5>
-							<p class="light center-align">Descrizione giuseppe n</p>
+							<p class="light center-align">Dottore in Ingegneria Informatica<br/>appassionato di imprenditoria</p>
 						</div>
 					</div>
 					
@@ -143,7 +152,7 @@
 							<div class="center"><img src="profilo.png" class="circle ritratto"/></div>
 							<h5 class="center blue-text text-darken-3">Giuseppe Bitonti</h5>
 							<h6 class="center blue-text text-darken-4">Legal & Admin</h5>
-							<p class="light center-align">Descrizione giuseppe b</p>
+							<p class="light center-align">Dottore in Scienze Aziendali<br/>appassionato di Marketing</p>
 						</div>
 					</div>
 					
@@ -152,7 +161,7 @@
 							<div class="center"><img src="profilo.png" class="circle ritratto"/></div>
 							<h5 class="center blue-text text-darken-3">Ivan Cozza</h5>
 							<h6 class="center blue-text text-darken-4">Chief SAPR</h5>
-							<p class="light center-align">Descrizione ivan</p>
+							<p class="light center-align">Esperto di Sistemi a pilotaggio remoto<br/>videomaker professionista</p>
 						</div>
 					</div>
 				</div>
@@ -170,7 +179,7 @@
 						<div class="video-YT col s12 m6 video-container">
 							<iframe id="videoFrame" src="https://www.youtube.com/embed/qh7XbkGb31c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
-						<div class="light col s12 m5 offset-m1 sfondo-demo round-demo right-align valign-wrapper">Testo interessante
+						<div class="light col s12 m5 offset-m1 sfondo-demo round-demo right-align valign-wrapper ">Questa è solo una delle cose che puoi fare con i droni FairEye. Il servizio è completamente versatile e si adatta alle tue esigenze, prova l'esperienza di avere tutta la tua azienda sotto controllo, nel palmo della tua mano!
 						</div>
 					</div>
 				</div>
@@ -184,33 +193,33 @@
 				<div class="row col-contattaci">
 					<div class="col s12 center">
 						<h5>Vuoi saperne di piu?</h5>
-						<form class="col s12" id="formContatti">
+						<form class="col s12" id="formContatti" method="post" action="http://faireye.altervista.org/com/send.php">
 							<div class="row">
 									<div class="input-field col m6 s12">
-											<input id="nome" type="text" class="validate" required>
+											<input id="nome" name="nome" type="text" class="validate" required>
 											<label for="nome">Nome</label>
 									</div>
 									<div class="input-field col m6 s12">
-											<input id="luogo" type="text" class="validate">
+											<input id="luogo" name="luogo" type="text" class="validate">
 											<label for="luogo">Luogo</label>
 									</div>
 									<div class="input-field col s12">
-										<textarea id="message" class="materialize-textarea" ></textarea>
+										<textarea id="message" name="message" class="materialize-textarea" ></textarea>
 										<label for="message">Dettagli sulla richiesta</label>
 										<span class="helper-text left-align">Spiega perchè ci stai contattando ed eventuali dettagli</span>
 									</div>
 									<div class="input-field col m6 s12">
-											<input id="mail" type="email" class="validate" required>
+											<input id="mail" name="mail" type="email" class="validate" required>
 											<label for="mail">E-Mail</label>
 									</div>
 									<div class="input-field col m6 s12">
-											<input id="cell" type="tel" class="validate">
+											<input id="cell" name="cell" type="tel" class="validate">
 											<label for="cell">Cellulare</label>
 									</div>
 							</div>
 							<div class="row col-bott-contattaci">
-								<button class="btn waves-effect waves-light col m8 s12 offset-m2 blue darken-3"
-									type="button" name="action">Contattaci</button>
+								<button class="btn waves-effect waves-light col m8 s12 offset-m2 blue darken-3" id="contattiBTN"
+									type="submit" name="action">Contattaci</button>
 							</div>
 						</form>
 					</div>
@@ -256,7 +265,13 @@
       </div>
     </div>
   </footer>
-
+	
+	<!-- Social Stiky Bar -->
+	<div class="icon-bar hide-on-med-and-down">
+		<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+		<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+	</div>
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

@@ -17,12 +17,15 @@ nav .brand-tipo-svg {
   height: 1.3em;
 }
 nav .brand-logo-svg {
-  padding-top: 10px;
-  height: 1.6em;
+  padding-top: 15px;
+  height: 1.7em;
 }
 
 .brand-tipo-side {
-	margin: 27px;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	margin-left: 5em;
+	margin-right: 5em;
 }
 
 p {
@@ -118,8 +121,9 @@ p {
   border-radius: 12px;
   height: 260px;
   justify-content: flex-end;
-  font-weight: bold;
+  font-weight: normal;
   margin-top: 20px;
+  font-size: 1.3em;
 }
 
 .video-container, #videoFrame {
@@ -155,4 +159,64 @@ video#bgvid {
 footer.page-footer, footer.footer-copyright {
   margin: 0;
   background-color: #3D5467;
+}
+
+ /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-button {
+	margin-top: 15px;
+}
+.fax {
+  padding: 15px;
+  font-size: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.fax:hover {
+  background-color: #000;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.icon-button a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.instagram {
+  background: #125688;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
 }
