@@ -51,8 +51,9 @@ p {
 }
 
 .header-subtitle {
-	margin-top: 10%;
-	font-size: 1.3em;
+	margin-bottom: 10%;
+	font-size: 1.6em;
+	opacity: 0.85;
 }
 
 @media only screen and (max-width : 992px) {
@@ -101,7 +102,7 @@ p {
 }
 
 .sfondo-demo {
-  background-color: rgba(150,150,150,0.4);
+  background-color: rgba(68,68,68,0.4);
 }
 
 .striscia-demo {
